@@ -16,6 +16,7 @@ function openTab(tabId) {
 
   // Activate the clicked tab button
   var clickedButton = document.querySelector('[onclick="openTab(\'' + tabId + '\')"]');
-  clickedButton.classList.add('active');
+  if (clickedButton) {
+    clickedButton.classList.add('active');
+  }
 }
-
