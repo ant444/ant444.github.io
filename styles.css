@@ -30,7 +30,8 @@ nav ul li a {
 
 main {
   padding: 20px;
-  text-align: center;
+  margin: 0 auto; /* Center the main content horizontally */
+  max-width: 800px; /* Adjust the max-width as needed */
 }
 
 main > h2 {
