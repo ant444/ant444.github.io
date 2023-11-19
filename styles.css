@@ -32,8 +32,10 @@ main {
   padding: 20px;
   text-align: center;
 }
-main h2 {
+
+main > h2 {
   text-align: center;
+  margin: 0; /* Remove default margins */
 }
 
 section {
