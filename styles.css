@@ -38,7 +38,14 @@ main > h2 {
   text-align: center;
   margin: 0; /* Remove default margins */
 }
+main h2 {
+  text-align: center;
+  margin: 0;
+}
 
+
+
+  
 section {
   margin-bottom: 30px;
 }
