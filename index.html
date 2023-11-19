@@ -19,7 +19,6 @@
     <section id="home" class="tab-content">
       <h1>Anthony Nelson</h1>
       <p>Welcome to My Portfolio Site!</p>
-      <a href="#portfolio" class="cta-btn">View Portfolio</a>
     </section>
 
     <section id="contact" class="tab-content" style="display: none;">
@@ -59,5 +58,22 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+  // Function to show the home tab content on page load
+  function showHomeTab() {
+    // Hide all tab contents
+    var tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(function(tabContent) {
+      tabContent.style.display = 'none';
+    });
+
+    // Show the home tab content
+    document.getElementById('home').style.display = 'block';
+  }
+
+  // Call the function to show the home tab content on page load
+  window.onload = showHomeTab;
+</script>
 </body>
 </html>
