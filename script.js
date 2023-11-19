@@ -7,8 +7,6 @@ function openTab(tabId) {
 
   // Show the selected tab content
   document.getElementById(tabId).style.display = 'block';
-}
-
 
   // Deactivate all tab buttons
   var tabButtons = document.querySelectorAll('.tab-button');
@@ -20,3 +18,4 @@ function openTab(tabId) {
   var clickedButton = document.querySelector('[onclick="openTab(\'' + tabId + '\')"]');
   clickedButton.classList.add('active');
 }
+
