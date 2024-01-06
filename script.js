@@ -24,6 +24,7 @@ function openTab(tabId) {
 //Start the search
 function performSearch(event) {
     if (event.keyCode === 13 || event.which === 13) {
+        event.preventDefault();
         var query = document.getElementById('searchInput').value.trim();
         var activeTab = document.querySelector('.tab-content.active');
 
