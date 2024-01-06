@@ -7,17 +7,22 @@
 </head>
 <body>
 
-  <header>
-    <button class="tab-button" onclick="openTab('home')">Home</button>
-    <button class="tab-button" onclick="openTab('contact')">Contact</button>
-    <button class="tab-button" onclick="openTab('about')">About</button>
-    <button class="tab-button" onclick="openTab('portfolio')">Portfolio</button>
-    <button class="tab-button" onclick="openTab('resume')">Resume</button>
-    <form action="/search" method="GET">
-    <input type="text" placeholder="Search..." name="q" />
-    <button type="submit">Search</button>
-</form>
-  </header>
+<header>
+    <div class="header-left">
+        <button class="tab-button" onclick="openTab('home')">Home</button>
+        <button class="tab-button" onclick="openTab('contact')">Contact</button>
+        <button class="tab-button" onclick="openTab('about')">About</button>
+        <button class="tab-button" onclick="openTab('portfolio')">Portfolio</button>
+        <button class="tab-button" onclick="openTab('resume')">Resume</button>
+    </div>
+    <div class="header-right">
+        <form action="/search" method="GET">
+            <input type="text" placeholder="Search..." name="q" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</header>
+
 
   <main>
     <section id="home" class="tab-content">
