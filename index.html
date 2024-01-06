@@ -16,10 +16,8 @@
         <button class="tab-button" onclick="openTab('resume')">Resume</button>
     </div>
     <div class="header-right">
-        <form action="/search" method="GET">
-            <input type="text" placeholder="Search..." name="q" />
-            <button type="submit">Search</button>
-        </form>
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <button type="button" onclick="performSearch()">Search</button>
     </div>
 </header>
 
