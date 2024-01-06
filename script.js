@@ -32,22 +32,22 @@ function performSearch(event) {
         if (!activeTab) return;
 
         var found = false;
-        var textNodes = activeTab.querySelectorAll(":not(iframe)");
-        textNodes.forEach(function(node) {
-            if (node.nodeType === 3) { // Text nodes
-                var text = node.nodeValue;
-                var regex = new RegExp('\\b' + query + '\\b', 'gi');
-                var replacedText = text.replace(regex, function(match) {
-                    found = true;
-                    return '<span class="highlight">' + match + '</span>';
-                });
-                if (replacedText !== text) {
-                    var newNode = document.createElement("span");
-                    newNode.innerHTML = replacedText;
-                    node.parentNode.replaceChild(newNode, node);
-                }
-            }
+        var content = activeTab.innerHTML; // Get the original HTML content of the tab
+
+        if (query === '') {
+            activeTab.innerHTML = content; // Reset HTML content
+            return;
+        }
+
+        var escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escape special regex characters
+        var regex = new RegExp('\\b' + escapedQuery + '\\b', 'gi'); // Word boundary search
+
+        var highlightedContent = content.replace(regex, function(match) {
+            found = true;
+            return '<span class="highlight">' + match + '</span>';
         });
+
+        activeTab.innerHTML = highlightedContent; // Update tab's HTML content
 
         if (!found) {
             alert('The word is not found in the current tab.');
