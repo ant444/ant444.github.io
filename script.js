@@ -20,3 +20,19 @@ function openTab(tabId) {
     clickedButton.classList.add('active');
   }
 }
+
+function performSearch() {
+    var query = document.getElementById('searchInput').value.toLowerCase(); // Get the search query
+    
+    var allContent = document.querySelectorAll('.tab-content'); // Get all content elements
+    allContent.forEach(function(content) {
+        var contentText = content.textContent.toLowerCase(); // Get text content of each element
+        
+        if (contentText.includes(query)) {
+            content.style.display = 'block'; // Show the content containing the query
+        } else {
+            content.style.display = 'none'; // Hide content that doesn't match the query
+        }
+    });
+}
+
