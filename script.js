@@ -22,41 +22,42 @@ function openTab(tabId) {
 }
 
 //Start the search
-function performSearch() {
-    var query = document.getElementById('searchInput').value; // Get the search query without converting to lowercase
-    var tabs = document.querySelectorAll('.tab-content');
+function performSearch(event) {
+    // Check if the Enter key (key code 13) is pressed
+    if (event.keyCode === 13 || event.which === 13) {
+        var query = document.getElementById('searchInput').value; // Get the search query without converting to lowercase
+        var tabs = document.querySelectorAll('.tab-content');
 
-    if (query.trim() === '') {
-        tabs.forEach(function(tab) {
-            tab.innerHTML = tab.textContent; // Remove any previous highlighting if the query is empty
-            tab.style.display = 'block'; // Show all tabs when search query is empty
-        });
-        return;
-    }
-
-    var found = false;
-    var regex = new RegExp(query, 'g'); // Create a regular expression with the query
-
-    tabs.forEach(function(tab) {
-        var contentText = tab.textContent; // Get text content of each tab
-
-        var replacedHTML = contentText.replace(regex, function(match) {
-            return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
-        });
-
-        tab.innerHTML = replacedHTML; // Update content with highlighted text
-
-        if (regex.test(contentText)) {
-            tab.style.display = 'block'; // Show the tab if query is found
-            found = true;
-        } else {
-            tab.style.display = 'none'; // Hide the tab if query is not found
+        if (query.trim() === '') {
+            tabs.forEach(function(tab) {
+                tab.innerHTML = tab.textContent; // Remove any previous highlighting if the query is empty
+                tab.style.display = 'block'; // Show all tabs when search query is empty
+            });
+            return;
         }
-    });
 
-    if (!found) {
-        alert('The word is not found in any tab.'); // Show alert if the word is not found in any tab
+        var found = false;
+        var regex = new RegExp(query, 'g'); // Create a regular expression with the query
+
+        tabs.forEach(function(tab) {
+            var contentText = tab.textContent; // Get text content of each tab
+
+            var replacedHTML = contentText.replace(regex, function(match) {
+                return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
+            });
+
+            tab.innerHTML = replacedHTML; // Update content with highlighted text
+
+            if (regex.test(contentText)) {
+                tab.style.display = 'block'; // Show the tab if query is found
+                found = true;
+            } else {
+                tab.style.display = 'none'; // Hide the tab if query is not found
+            }
+        });
+
+        if (!found) {
+            alert('The word is not found in any tab.'); // Show alert if the word is not found in any tab
+        }
     }
 }
-
-
