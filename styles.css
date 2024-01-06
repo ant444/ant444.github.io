@@ -17,11 +17,14 @@ header {
 .header-left {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center-align the tab buttons */
+    flex: 1; /* Occupy available space */
 }
 
 .header-right {
     display: flex;
     align-items: center;
+    margin-right: 10px; /* Add margin to the right side */
 }
 
 
