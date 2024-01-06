@@ -17,14 +17,15 @@ header {
 .header-left {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center-align the tab buttons */
-    flex: 1; /* Occupy available space */
+    margin-left: 10px; 
 }
 
-.header-right {
+.header-center {
     display: flex;
+    justify-content: center; /* Center-align the tab buttons */
     align-items: center;
-    margin-right: 10px; /* Add margin to the right side */
+    flex: 1; /* Occupy available space */
+    margin: 0 auto; /* Center horizontally */
 }
 
 
