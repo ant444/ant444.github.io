@@ -24,7 +24,7 @@ header {
     display: flex;
      /* Center-align the tab buttons */
     align-items: center;
-    flex: 0; /*just changed */
+    flex: 0.5; /*just changed */
     margin-center: 0px; /* Center horizontally */
 }
 
