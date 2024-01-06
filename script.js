@@ -23,34 +23,34 @@ function openTab(tabId) {
 
 //Start the search
 function performSearch(event) {
-    if (event.keyCode === 13 || event.which === 13 || event.type === 'click') {
-        event.preventDefault(); // Prevent default form submission behavior
+    if (event.keyCode === 13 || event.type === 'click') {
+        event.preventDefault();
 
-        var query = document.getElementById('searchInput').value.trim(); // Get the search query
+        var query = document.getElementById('searchInput').value.trim();
         var activeTab = document.querySelector('.tab-content.active');
 
         if (!activeTab) return;
 
-        var found = false;
-        var content = activeTab.innerHTML; // Get the original HTML content of the tab
+        var content = activeTab.textContent; // Use textContent to search within text only
 
         if (query === '') {
             activeTab.innerHTML = content; // Reset HTML content
             return;
         }
 
-        var escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escape special regex characters
-        var regex = new RegExp('\\b' + escapedQuery + '\\b', 'gi'); // Word boundary search with 'gi' flag for global and case-insensitive search
+        var escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        var regex = new RegExp('\\b' + escapedQuery + '\\b', 'gi');
 
         var highlightedContent = content.replace(regex, function(match) {
-            found = true;
             return '<span class="highlight">' + match + '</span>';
         });
 
-        activeTab.innerHTML = highlightedContent; // Update tab's HTML content
+        activeTab.innerHTML = highlightedContent;
 
-        if (!found) {
+        var highlightedElements = activeTab.querySelectorAll('.highlight');
+        if (highlightedElements.length === 0) {
             alert('The word is not found in the current tab.');
         }
     }
 }
+
