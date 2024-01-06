@@ -21,12 +21,19 @@ function openTab(tabId) {
   }
 }
 
+//Start the search
 function performSearch() {
     var query = document.getElementById('searchInput').value.toLowerCase(); // Get the search query
     
     var allContent = document.querySelectorAll('.tab-content'); // Get all content elements
     allContent.forEach(function(content) {
-        var contentText = content.textContent.toLowerCase(); // Get text content of each element
+        var contentText = content.innerHTML.toLowerCase(); // Get HTML content of each element
+        
+        var replacedHTML = contentText.replace(new RegExp(query, 'gi'), function(match) {
+            return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
+        });
+
+        content.innerHTML = replacedHTML; // Update content with highlighted text
         
         if (contentText.includes(query)) {
             content.style.display = 'block'; // Show the content containing the query
