@@ -23,41 +23,57 @@ function openTab(tabId) {
 
 //Start the search
 function performSearch(event) {
-    // Check if the Enter key (key code 13) is pressed
     if (event.keyCode === 13 || event.which === 13) {
-        var query = document.getElementById('searchInput').value; // Get the search query without converting to lowercase
+        var query = document.getElementById('searchInput').value;
+        var activeTab = document.querySelector('.tab-content.active');
+
+        if (!activeTab) return;
+
         var tabs = document.querySelectorAll('.tab-content');
 
         if (query.trim() === '') {
             tabs.forEach(function(tab) {
-                tab.innerHTML = tab.textContent; // Remove any previous highlighting if the query is empty
-                tab.style.display = 'block'; // Show all tabs when search query is empty
+                tab.innerHTML = tab.textContent;
+                tab.style.display = 'block';
             });
             return;
         }
 
         var found = false;
-        var regex = new RegExp(query, 'g'); // Create a regular expression with the query
+        var regex = new RegExp(query, 'g');
 
         tabs.forEach(function(tab) {
-            var contentText = tab.textContent; // Get text content of each tab
+            if (tab === activeTab) {
+                var contentText = tab.textContent;
 
-            var replacedHTML = contentText.replace(regex, function(match) {
-                return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
-            });
+                var replacedHTML = contentText.replace(regex, function(match) {
+                    found = true;
+                    return '<span class="highlight">' + match + '</span>';
+                });
 
-            tab.innerHTML = replacedHTML; // Update content with highlighted text
+                tab.innerHTML = replacedHTML;
 
-            if (regex.test(contentText)) {
-                tab.style.display = 'block'; // Show the tab if query is found
-                found = true;
+                if (regex.test(contentText)) {
+                    tab.style.display = 'block';
+                } else {
+                    tab.style.display = 'none';
+                }
             } else {
-                tab.style.display = 'none'; // Hide the tab if query is not found
+                var contentText = tab.textContent;
+
+                if (regex.test(contentText)) {
+                    tab.style.display = 'block';
+                    alert('The word is found in another tab.');
+                    found = true;
+                } else {
+                    tab.style.display = 'none';
+                }
             }
         });
 
         if (!found) {
-            alert('The word is not found in any tab.'); // Show alert if the word is not found in any tab
+            alert('The word is not found in the current tab or any other tab.');
         }
     }
 }
+
