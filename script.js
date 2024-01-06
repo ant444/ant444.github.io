@@ -23,31 +23,39 @@ function openTab(tabId) {
 
 //Start the search
 function performSearch() {
-    var query = document.getElementById('searchInput').value.toLowerCase(); // Get the search query
-    var activeTab = document.querySelector('.tab-content.active'); // Get the active tab's content
+    var query = document.getElementById('searchInput').value; // Get the search query without converting to lowercase
+    var tabs = document.querySelectorAll('.tab-content');
 
-    if (!activeTab) return; // If no active tab, exit the function
+    if (query.trim() === '') {
+        tabs.forEach(function(tab) {
+            tab.innerHTML = tab.textContent; // Remove any previous highlighting if the query is empty
+            tab.style.display = 'block'; // Show all tabs when search query is empty
+        });
+        return;
+    }
 
-    var contentText = activeTab.textContent.toLowerCase(); // Get text content of active tab
-    
-    var replacedHTML = contentText.replace(new RegExp(query, 'gi'), function(match) {
-        return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
+    var found = false;
+    var regex = new RegExp(query, 'g'); // Create a regular expression with the query
+
+    tabs.forEach(function(tab) {
+        var contentText = tab.textContent; // Get text content of each tab
+
+        var replacedHTML = contentText.replace(regex, function(match) {
+            return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
+        });
+
+        tab.innerHTML = replacedHTML; // Update content with highlighted text
+
+        if (regex.test(contentText)) {
+            tab.style.display = 'block'; // Show the tab if query is found
+            found = true;
+        } else {
+            tab.style.display = 'none'; // Hide the tab if query is not found
+        }
     });
 
-    activeTab.innerHTML = replacedHTML; // Update content with highlighted text
-    
-    if (query === '') {
-        // If search query is empty, show all content
-        var allContent = document.querySelectorAll('.tab-content');
-        allContent.forEach(function(content) {
-            content.style.display = 'block';
-        });
-    } else {
-        // Hide content that doesn't match the query
-        var regex = new RegExp(query, 'gi');
-        if (!contentText.match(regex)) {
-            activeTab.style.display = 'none';
-        }
+    if (!found) {
+        alert('The word is not found in any tab.'); // Show alert if the word is not found in any tab
     }
 }
 
