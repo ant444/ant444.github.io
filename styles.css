@@ -123,3 +123,8 @@ button {
     cursor: pointer;
 }
 
+.highlight {
+    background-color: yellow; /* Change to the desired highlight color */
+    font-weight: bold; /* Adjust styling as needed */
+}
+
