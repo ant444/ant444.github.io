@@ -24,50 +24,38 @@ function openTab(tabId) {
 //Start the search
 function performSearch(event) {
     if (event.keyCode === 13 || event.which === 13) {
-        var query = document.getElementById('searchInput').value;
+        var query = document.getElementById('searchInput').value.trim();
         var activeTab = document.querySelector('.tab-content.active');
 
         if (!activeTab) return;
 
         var tabs = document.querySelectorAll('.tab-content');
 
-        if (query.trim() === '') {
+        if (query === '') {
             tabs.forEach(function(tab) {
-                tab.innerHTML = tab.textContent;
+                tab.querySelectorAll('.highlight').forEach(function(element) {
+                    element.replaceWith(element.textContent); // Remove previous highlights
+                });
                 tab.style.display = 'block';
             });
             return;
         }
 
         var found = false;
-        var regex = new RegExp(query, 'g');
+        var regex = new RegExp(query, 'gi');
 
         tabs.forEach(function(tab) {
             if (tab === activeTab) {
-                var contentText = tab.textContent;
-
-                var replacedHTML = contentText.replace(regex, function(match) {
+                var content = tab.innerHTML; // Get the original HTML content of the tab
+                var highlightedContent = content.replace(regex, function(match) {
                     found = true;
                     return '<span class="highlight">' + match + '</span>';
                 });
-
-                tab.innerHTML = replacedHTML;
-
-                if (regex.test(contentText)) {
-                    tab.style.display = 'block';
-                } else {
-                    tab.style.display = 'none';
-                }
+                tab.innerHTML = highlightedContent; // Update tab's HTML content
+                tab.style.display = regex.test(content) ? 'block' : 'none'; // Show or hide tab based on search results
             } else {
                 var contentText = tab.textContent;
-
-                if (regex.test(contentText)) {
-                    tab.style.display = 'block';
-                    alert('The word is found in another tab.');
-                    found = true;
-                } else {
-                    tab.style.display = 'none';
-                }
+                tab.style.display = regex.test(contentText) ? 'block' : 'none'; // Show or hide tab based on search results
             }
         });
 
@@ -76,4 +64,3 @@ function performSearch(event) {
         }
     }
 }
-
