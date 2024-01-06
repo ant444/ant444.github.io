@@ -23,7 +23,7 @@ function openTab(tabId) {
 
 //Start the search
 function performSearch(event) {
-    if (event.keyCode === 13 || event.which === 13) {
+    if (event.keyCode === 13 || event.which === 13 || event.type === 'click') {
         event.preventDefault(); // Prevent default form submission behavior
 
         var query = document.getElementById('searchInput').value.trim(); // Get the search query
@@ -40,7 +40,7 @@ function performSearch(event) {
         }
 
         var escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escape special regex characters
-        var regex = new RegExp('\\b' + escapedQuery + '\\b', 'gi'); // Word boundary search
+        var regex = new RegExp('\\b' + escapedQuery + '\\b', 'gi'); // Word boundary search with 'gi' flag for global and case-insensitive search
 
         var highlightedContent = content.replace(regex, function(match) {
             found = true;
