@@ -25,7 +25,7 @@ header {
      /* Center-align the tab buttons */
     align-items: center;
     flex: 1; /* Occupy available space */
-    margin-center: 30px; /* Center horizontally */
+    margin-center: 45px; /* Center horizontally */
 }
 
 
