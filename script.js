@@ -24,22 +24,31 @@ function openTab(tabId) {
 //Start the search
 function performSearch() {
     var query = document.getElementById('searchInput').value.toLowerCase(); // Get the search query
-    
-    var allContent = document.querySelectorAll('.tab-content'); // Get all content elements
-    allContent.forEach(function(content) {
-        var contentText = content.innerHTML.toLowerCase(); // Get HTML content of each element
-        
-        var replacedHTML = contentText.replace(new RegExp(query, 'gi'), function(match) {
-            return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
-        });
+    var activeTab = document.querySelector('.tab-content.active'); // Get the active tab's content
 
-        content.innerHTML = replacedHTML; // Update content with highlighted text
-        
-        if (contentText.includes(query)) {
-            content.style.display = 'block'; // Show the content containing the query
-        } else {
-            content.style.display = 'none'; // Hide content that doesn't match the query
-        }
+    if (!activeTab) return; // If no active tab, exit the function
+
+    var contentText = activeTab.textContent.toLowerCase(); // Get text content of active tab
+    
+    var replacedHTML = contentText.replace(new RegExp(query, 'gi'), function(match) {
+        return '<span class="highlight">' + match + '</span>'; // Wrap matches in <span> tags for highlighting
     });
+
+    activeTab.innerHTML = replacedHTML; // Update content with highlighted text
+    
+    if (query === '') {
+        // If search query is empty, show all content
+        var allContent = document.querySelectorAll('.tab-content');
+        allContent.forEach(function(content) {
+            content.style.display = 'block';
+        });
+    } else {
+        // Hide content that doesn't match the query
+        var regex = new RegExp(query, 'gi');
+        if (!contentText.match(regex)) {
+            activeTab.style.display = 'none';
+        }
+    }
 }
+
 
