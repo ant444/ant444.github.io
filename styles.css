@@ -81,7 +81,7 @@ footer {
 
 /* Style for the tab buttons */
 .tab-button {
-  background-color: #f1f1f1;
+  background-color: #333;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
