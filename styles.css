@@ -14,18 +14,9 @@ header {
   align-items: center;
 }
 
-.header-left {
-    display: flex;
-    align-items: center;
-    margin-left: 10px; 
-}
 
 .header-center {
-    display: flex;
-     /* Center-align the tab buttons */
-    align-items: center;
-    flex: 1; /*just changed */
-    margin-center: 0px; /* Center horizontally */
+  text-align: center;
 }
 
 
