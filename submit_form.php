@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Description: $description\n";
 
     // Set up the email headers
-    $headers = "From: anthonynelson444@icloud.com" ; // Set your own email address
+    $headers = "From: anthonynelson059@gmail.com" ; // Set your own email address
 
     // Send the email
     mail("anthonynelson059@gmail.com", $subject, $message, $headers);
