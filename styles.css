@@ -58,8 +58,8 @@ main h2 {
 }
 
 .image-container {
-    width: 600px;
-    height: 400px;
+    width: 70%;
+    height: 70%;
     overflow: hidden; /* Optional: hides any overflow beyond the container */
     border: 2px solid black;
 }
