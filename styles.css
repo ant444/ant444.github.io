@@ -59,12 +59,12 @@ main h2 {
 
 .image-container {
     width: 70%;
-    height: auto;
+    height: 70%;
     overflow: hidden; /* Optional: hides any overflow beyond the container */
 }
 .reg-img {
   width: 70%;
-  height:auto;
+  height:70%;
   border: 2px solid black;
 }
 
