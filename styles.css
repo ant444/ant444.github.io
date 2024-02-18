@@ -53,6 +53,7 @@ main h2 {
 
 img {
   /* Adjust this value as needed */
+  width: 30%;
   height: auto; /* This maintains the image's aspect ratio */
 }
 
