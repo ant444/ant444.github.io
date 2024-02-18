@@ -51,7 +51,7 @@ main h2 {
   margin: 0;
 }
 
-img {
+.small-img {
   /* Adjust this value as needed */
   width: 3%;
   height: auto; /* This maintains the image's aspect ratio */
