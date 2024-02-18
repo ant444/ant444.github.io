@@ -57,6 +57,15 @@ img {
   height: auto; /* This maintains the image's aspect ratio */
 }
 
+.image-container {
+    width: 600px;
+    height: 400px;
+    overflow: hidden; /* Optional: hides any overflow beyond the container */
+}
+
+
+
+
 section {
   margin-bottom: 30px;
 }
