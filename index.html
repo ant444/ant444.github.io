@@ -8,71 +8,237 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+  
 <header>
+<!--  <div class="header-left">
+        <form action="/search" method="GET">
+            <input type="text" id="searchInput" placeholder="Search..." onkeypress="performSearch(event)" />
+            <button type="button" onclick="performSearch()">Search</button> 
+        </form>
+    </div> -->
+  
     <div style="margin: 0 auto;">
         <button class="tab-button" onclick="openTab('home')">Home</button>
         <button class="tab-button" onclick="openTab('contact')">Contact</button>
         <button class="tab-button" onclick="openTab('about')">About</button>
+       <!-- <button class="tab-button" onclick="openTab('trips')">Trips</button> -->
         <button class="tab-button" onclick="openTab('portfolio')">Portfolio</button>
         <button class="tab-button" onclick="openTab('resume')">Resume</button>
+       <!--  <button class="tab-button" onclick="openTab('services')">Services</button> -->
     </div>
 </header>
 
-<main id="main-content">
-  <!-- Content will be loaded here -->
-  <section id="home"></section>
-  <section id="contact"></section>
-  <section id="about"></section>
-  <section id="portfolio"></section>
-  <section id="resume"></section>
-</main>
 
-<footer>
-    <p><small>&copy; 2023-2024 Anthony Nelson</small></p>
-    <p> <small><small><small>This presentation is protected by U.S. and International copyright laws. Reproduction and distribution of this presentation without permission from Anthony Nelson is prohibited.<small/></small></small> </p>
-</footer>
+  <main>
+    <section id="home" class="tab-content">
+      <h2>Created By: Anthony Nelson</h2>
+      <h2>Welcome to My Portfolio Site!</h2>
+      <h3> 👋 Hi, I am Anthony.</h3>
+      <h3> ✍️ A Computer Science major at Kutztown University of Pennsylvania. </h3>
+      <h3> 👨🏻‍💻 This website will always be a work in progress, as I will implement newly developed skills throughout my time in the industry.</h3>
+      <h3> 💻 Established in 2023. </h3>
+      <h3> ❓ Have a question? Ask the chat bot in the bottom right-hand corner!</h3>
+    </section>
 
-<script>
-  function openTab(tabId) {
-    fetch(`${tabId}.html`)
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('main-content').innerHTML = data;
-        updateUrl(tabId);
-      })
-      .catch(error => console.error('Error loading tab content:', error));
-  }
+<!--    <section id="trips" class="tab-content">
+    <h2>I went to Copenhagen, Denmark and Stockholm, Sweden in May of 2023. </h2>
+    <h3>Attached are some pictures. Enjoy.  </h3>
+    <div class="image-container">
+      <img src="images/addtext_com_MDAwNjE5MzM2NTc.jpg" height=70% width=70% class="reg-img">
+    </div>
+   </section>
+-->
 
-  function updateUrl(tabId) {
-    history.replaceState(null, null, `index.html#${tabId}`);
-  }
+    
+    <section id="contact" class="tab-content" style="display: none;">
+      <h2>Contact</h2>
+      <h3> Best way to contact me is via email - I usually respond within a few hours. </h3>
+      <p> 📞 Mobile: (570) 331-5908 </p>
+      <p> 📧 email: anels178@live.kutztown.edu </p>
+      <a href="mailto:anels178@live.kutztown.edu?subject=Website Inquiry">Send me an email!</a><br>
+      <p> </p>
+      <a href="https://www.linkedin.com/in/anthony-nelson-co2025/">
+    
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Image" class="small-img">
+      </a>
 
-  // Function to extract the hash from the URL and show the corresponding tab
-  function showTabFromUrl() {
-    var hash = window.location.hash.substr(1);
-    if (hash) {
-      openTab(hash);
-    } else {
-      // If no hash in URL, default to showing the home tab
-      openTab('home');
-    }
-  }
+    </section>
 
-  // Call the function to show the appropriate tab based on URL on page load
-  window.onload = showTabFromUrl;
-</script>
+    <section id="about" class="tab-content" style="display: none;">
+      <h2>About Me</h2>
+      <h3> 📚 I am a Computer Science major at Kutztown University of Pennsylvania. </h3>
+      <h3> 👨‍🎓 I am currently a junior and anticipate graduating in December 2024. I am highly considering going for my Master's Degree at Kutztown as well. </h3>
+      <h3> 🇪🇸 I have taken Spanish classes for 4 years of my life, so I know a little bit. </h3> 
+      <h3> 🌄 I love being outdoors, and I am an avid sports fan. </h3> 
+      <h3> 🇧🇿 🇸🇪 🇩🇰 I have traveled to 3 different countries outside of the US. Ask me about it! </h3>
+      <h3> 💉 Check out this website/blog I created about Artificial Intelligence in Medicine for a class <a href="https://artificial800511811.wordpress.com"> here! </a></h3>
+      
+    </section>
 
-<script src="script.js"></script>
+    <section id="portfolio" class="tab-content" style="display: none;">
+      <h2>Portfolio</h2>
+      <h2>Related Courses </h2>
+      <h3>Have Taken: 📝 </h3>
+      <p>Computer Science II, Discrete Mathematics II, Computer Organization and Assembly Language, Unix Scripting and Administration, Data Structures, Advanced Scientific Programming, Secure Network Programming, SQL Programming</p>
+      <h3>Currently Taking: 📖 </h3>
+      <p> Human Computer Interaction (Masters Class), Software Engineering 1, Operating Systems, Programming Languages, Introduction to Database Management Systems </p>
+      <h2>Programming Languages:  </h2>
+      <p>C++, Python, C, BASH, HTML, CSS, SQL, JavaScript</p>
+      <h2>Previous Projects: </h2>
+      <h3>Data Structures Project 🖥 </h3>
+      <p>Implemented an inheritance hierarchy including a Circular Linked List, an Object Array, and a vector. Users can insert a file to be read and choose to print the subclass iteratively or recursively.<a href="https://github.com/ant444/DataStructuresProject"> GitHub Link! </a></p>
+      <h3>Network and Secure Programming Project(s) 🔐 </h3>
+      <h4> Final Project </h4>
+      <p> Led the development as a Project Manager for a chat server, overseeing client-side implementation. Orchestrated seamless communication between the client and server, ensuring real-time message retrieval and immediate output upon reception. Facilitated team collaboration, encouraging effective communication and ensuring project alignment to meet specifications within established timelines.  <a href="https://github.com/ant444/CSC328Final"> GitHub Link! </a> </p>
+      <h4> Threading Project </h4>
+      <p>Implemented the pthread library in C to create a set number of child processes based on user input via the command line. The main thread coordinated subthreads and their functionalities, applying error checking when applicable. <a href="https://github.com/ant444/CSC328Project3"> GitHub Link! </a></p>
+      <h2>Hands On Experience</h2>
+      <p>I have had my fair share of experience with computer hardware. I have repaired laptop screens and batteries. I have a thorough understanding of what components do what within a PC. </p>
+    </section>
+    <section id="resume" class="tab-content">
+      <h2>Resume</h2>
+      <div class="center-content">
+        <iframe src="https://docs.google.com/document/d/11CKhuHmPnYs_VlNs99TKlz1mpXY74xhmDL3M8PK3tM0/pub?embedded=true" width="1200" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </section>
+  <!--
+  <section id="services" class="tab-content">
+    <h2>Services Offered</h2>
+    <p> 👨‍🔧 As stated on my Portfolio, I have a fair share of technology repairs under my belt. </p>
+    <p> 📈 I am offering these services on a first-come-first-serve basis. </p>
+    <p> 💼 As I am not a professional just yet, depending on the device, the only thing you will have to pay for is the parts. </p>
+    <p> 📝 Please fill out this form below, where I will respond in a timely manner on if I can repair your device or not. </p>
+    <p> 😀 Thanks! </p>
+    <p> 🚧 Work in progress, do not use yet... </p>
+    <body>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+      <body>
+    -->
+    <!--
+<h2>Contact Form</h2>
 
-<script>
-  window.embeddedChatbotConfig = {
-    chatbotId: "F-aldZ8Fz-jv9X8-90y21",
-    domain: "www.chatbase.co"
-  };
-</script>
-<script src="https://www.chatbase.co/embed.min.js" chatbotId="F-aldZ8Fz-jv9X8-90y21" domain="www.chatbase.co" defer></script>
+    <form action="/submit_form.php" method="post" id="contactForm">
+        <!-- Name Input -->
+       <!-- <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br>
+        -->
+        <!-- Email Input 
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+        -->
+        <!-- Device Input 
+        <label for="device">Device:</label>
+        <input type="text" id="device" name="device" required>
+
+        <br>
+        -->
+        <!-- Service Needed Dropdown 
+        <label for="service">Service Needed:</label>
+        <select id="service" name="service" required onchange="toggleDescription()">
+            <option value="" disabled selected>Select a service</option>
+            <option value="repair">Device Repair</option>
+            <option value="maintenance">Routine Maintenance</option>
+            <option value="consultation">Consultation</option>
+            <option value="other">Other</option>
+        </select>
+        -->
+        <!-- Description Textbox (Initially Hidden) 
+        <div id="descriptionContainer" class="hidden">
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+        </div>
+
+        <br>
+        -->
+        <!-- Submit Button -
+        <input type="submit" value="Submit">
+    </form>
+    -->
+
+
+
+
+
+
+      
+        
+    <script>
+        function toggleDescription() {
+            var descriptionContainer = document.getElementById('descriptionContainer');
+            var serviceDropdown = document.getElementById('service');
+            var descriptionInput = document.getElementById('description');
+
+            if (serviceDropdown.value === 'other') {
+                descriptionContainer.classList.remove('hidden');
+                descriptionInput.setAttribute('required', 'required');
+            } else {
+                descriptionContainer.classList.add('hidden');
+                descriptionInput.removeAttribute('required');
+            }
+        }
+    </script>
 
 </body>
+  </section>
+
+
+    
+  </main>
+
+  <footer>
+    <p><small>&copy; 2023-2024 Anthony Nelson</small></p>
+    <p> <small><small><small>This presentation is protected by U.S. and International copyright laws. Reproduction and distribution of this presentation without permission from Anthony Nelson is prohibited.<small/></small></small> </p2>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+  // Function to show the home tab content on page load
+  function showHomeTab() {
+    // Hide all tab contents
+    var tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(function(tabContent) {
+      tabContent.style.display = 'none';
+    });
+
+    // Show the home tab content
+    document.getElementById('home').style.display = 'block';
+  }
+
+  // Call the function to show the home tab content on page load
+  window.onload = showHomeTab;
+
+</script>
+ <!-- <iframe
+src="https://www.chatbase.co/chatbot-iframe/F-aldZ8Fz-jv9X8-90y21"
+width="30%"
+style="height: 30%; min-height: 300px"
+frameborder="0"
+></iframe>
+-->
+  <script>
+window.embeddedChatbotConfig = {
+chatbotId: "F-aldZ8Fz-jv9X8-90y21",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="F-aldZ8Fz-jv9X8-90y21"
+domain="www.chatbase.co"
+defer>
+</script>
+</body>
 </html>
+
+
+
 
