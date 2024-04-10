@@ -32,16 +32,18 @@
             <button type="button" onclick="performSearch()">Search</button> 
         </form>
     </div> -->
-  
+  <!--
     <div style="margin: 0 auto;">
         <button class="tab-button" onclick="openTab('home')">Home</button>
         <button class="tab-button" onclick="openTab('contact')">Contact</button>
         <button class="tab-button" onclick="openTab('about')">About</button>
        <!-- <button class="tab-button" onclick="openTab('trips')">Trips</button> -->
+      <!--
         <button class="tab-button" onclick="openTab('portfolio')">Portfolio</button>
         <button class="tab-button" onclick="openTab('resume')">Resume</button>
        <!--  <button class="tab-button" onclick="openTab('services')">Services</button> -->
-    </div>
+  <!--  </div> 
+  -->
 </header>
 
 
@@ -216,6 +218,40 @@
 
   <script src="script.js"></script>
 
+      <script>
+  // Function to toggle the visibility of the menu bar
+  function toggleMenu() {
+    var menuBar = document.getElementById('menuBar');
+    menuBar.classList.toggle('show-menu');
+  }
+
+  // Function to switch between tabs
+  function openTab(tabName) {
+    // Hide all tab contents
+    var tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(function(tabContent) {
+      tabContent.style.display = 'none';
+    });
+    
+    // Show the selected tab content
+    document.getElementById(tabName).style.display = 'block';
+  }
+
+  // Function to show the home tab content on page load
+  function showHomeTab() {
+    // Hide all tab contents
+    var tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(function(tabContent) {
+      tabContent.style.display = 'none';
+    });
+
+    // Show the home tab content
+    document.getElementById('home').style.display = 'block';
+  }
+
+  // Call the function to show the home tab content on page load
+  window.onload = showHomeTab;
+</script>
   <script>
   // Function to show the home tab content on page load
   function showHomeTab() {
@@ -233,13 +269,7 @@
   window.onload = showHomeTab;
 
 </script>
- <!-- <iframe
-src="https://www.chatbase.co/chatbot-iframe/F-aldZ8Fz-jv9X8-90y21"
-width="30%"
-style="height: 30%; min-height: 300px"
-frameborder="0"
-></iframe>
--->
+
   <script>
 window.embeddedChatbotConfig = {
 chatbotId: "F-aldZ8Fz-jv9X8-90y21",
