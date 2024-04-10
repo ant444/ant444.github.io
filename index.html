@@ -8,50 +8,23 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<nav>
-  <div class="logo">
-    <i class="bx bx-menu menu-icon"></i>
-    <span class="logo-name">CodingLab</span>
+
+
+<header>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
   </div>
-  <div class="sidebar">
-    <div class="logo">
-      <i class="bx bx-menu menu-icon"></i>
-      <span class="logo-name">CodingLab</span>
-    </div>
-    <div class="sidebar-content">
-      <ul class="lists">
-        <li class="list">
-          <a href="#" class="nav-link" onclick="openTab('home')">
-            <span class="link">Home</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#" class="nav-link" onclick="openTab('contact')">
-            <span class="link">Contact</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#" class="nav-link" onclick="openTab('about')">
-            <span class="link">About</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#" class="nav-link" onclick="openTab('portfolio')">
-            <span class="link">Portfolio</span>
-          </a>
-        </li>
-        <li class="list">
-          <a href="#" class="nav-link" onclick="openTab('resume')">
-            <span class="link">Resume</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+  
+  <!-- Menu bar -->
+  <div class="menu-bar" id="menuBar">
+    <button class="tab-button" onclick="openTab('home')">Home</button>
+    <button class="tab-button" onclick="openTab('contact')">Contact</button>
+    <button class="tab-button" onclick="openTab('about')">About</button>
+    <button class="tab-button" onclick="openTab('portfolio')">Portfolio</button>
+    <button class="tab-button" onclick="openTab('resume')">Resume</button>
   </div>
-</nav>
-
-
-
  
 <!--  <div class="header-left">
         <form action="/search" method="GET">
@@ -71,7 +44,7 @@
        <!--  <button class="tab-button" onclick="openTab('services')">Services</button> -->
   <!--  </div> 
   -->
-
+</header>
 
 
   <main>
@@ -311,7 +284,3 @@ defer>
 </script>
 </body>
 </html>
-
-
-
-
