@@ -8,7 +8,7 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 10px 0;
+  padding: 10px 20px; /* Increase padding for better spacing */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,18 +18,20 @@ header {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  padding: 10px;
 }
 
 .menu-icon {
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: white; /* Change color to white for better visibility */
   margin: 4px 0;
 }
 
 .menu-bar {
   display: none;
+  position: absolute; /* Position the menu bar */
+  top: 50px; /* Adjust top position to align with header */
+  right: 20px; /* Align with the right edge of the viewport */
 }
 
 .show-menu {
@@ -83,5 +85,3 @@ footer {
 .tab-content.active {
   display: block;
 }
-
-
