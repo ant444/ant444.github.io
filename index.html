@@ -10,14 +10,22 @@
 <body>
   
 <header>
-
-   <div class="menu-bar">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+  </div>
+  
+  <!-- Menu bar -->
+  <div class="menu-bar" id="menuBar">
     <button class="tab-button" onclick="openTab('home')">Home</button>
     <button class="tab-button" onclick="openTab('contact')">Contact</button>
     <button class="tab-button" onclick="openTab('about')">About</button>
     <button class="tab-button" onclick="openTab('portfolio')">Portfolio</button>
     <button class="tab-button" onclick="openTab('resume')">Resume</button>
   </div>
+ 
+  
 <!--  <div class="header-left">
         <form action="/search" method="GET">
             <input type="text" id="searchInput" placeholder="Search..." onkeypress="performSearch(event)" />
