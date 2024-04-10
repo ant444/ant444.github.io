@@ -13,6 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 .menu-toggle {
   display: flex;
   flex-direction: column;
@@ -40,64 +41,10 @@ header {
   padding: 10px;
 }
 
-
-.header-center {
-  margin: 0 auto;
-}
-
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
 main {
   padding: 20px;
   margin: 0 auto; /* Center the main content horizontally */
   max-width: 800px; /* Adjust the max-width as needed */
-}
-
-main > h2 {
-  text-align: center;
-  margin: 0; /* Remove default margins */
-}
-main h2 {
-  text-align: center;
-  margin: 0;
-}
-
-.small-img {
-  /* Adjust this value as needed */
-  width: 3%;
-  height: auto; /* This maintains the image's aspect ratio */
-}
-
-.image-container {
-    width: 70%;
-    height: 70%;
-    overflow: hidden; /* Optional: hides any overflow beyond the container */
-}
-.reg-img {
-  width: 70%;
-  height:70%;
-  border: 2px solid black;
-}
-
-
-
-section {
-  margin-bottom: 30px;
 }
 
 footer {
@@ -137,30 +84,4 @@ footer {
   display: block;
 }
 
-
-form {
-    display: flex;
-    align-items: center;
-}
-
-input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 5px;
-}
-
-button {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: grey;
-    cursor: pointer;
-}
-
-.highlight {
-    background-color: yellow; /* Change to the desired highlight color */
-    font-weight: bold; /* Adjust styling as needed */
-}
 
