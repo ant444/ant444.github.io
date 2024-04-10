@@ -101,19 +101,19 @@ nav.open ~ .overlay {
 
 
 
-
+/*
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  position: relative; /* Set position relative for proper positioning of menu bar */
+  position: relative;
 }
 
 header {
   background-color: #333;
   color: #fff;
-  padding: 10px 20px; /* Increase padding for better spacing */
+  padding: 10px 20px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,15 +128,15 @@ header {
 .menu-icon {
   width: 25px;
   height: 3px;
-  background-color: white; /* Change color to white for better visibility */
+  background-color: white; 
   margin: 4px 0;
 }
 
 .menu-bar {
   display: none;
-  position: absolute; /* Position the menu bar */
-  top: 50px; /* Adjust top position to align with header */
-  right: 20px; /* Align with the right edge of the viewport */
+  position: absolute;
+  top: 50px; 
+  right: 20px; 
 }
 
 .show-menu {
@@ -150,8 +150,8 @@ header {
 
 main {
   padding: 20px;
-  margin: 0 auto; /* Center the main content horizontally */
-  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 0 auto; 
+  max-width: 800px; 
 }
 
 footer {
@@ -165,7 +165,7 @@ footer {
   font-size: 14px;
 }
 
-/* Style for the tab buttons */
+
 .tab-button {
   background-color: #333;
   border: none;
@@ -175,19 +175,19 @@ footer {
   margin-right: 10px;
 }
 
-/* Active tab button style */
+
 .tab-button.active {
   background-color: #ccc;
 }
 
-/* Style for the tab content */
+
 .tab-content {
   display: none;
   padding: 20px;
 }
 
-/* Show the active tab content */
+
 .tab-content.active {
   display: block;
 }
-
+*/
