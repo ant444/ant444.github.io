@@ -3,13 +3,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  position: relative; /* Set position relative for proper positioning of menu bar */
 }
 
 header {
   background-color: #333;
   color: #fff;
-  padding: 10px 20px; /* Increase padding for better spacing */
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,20 +18,18 @@ header {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  padding: 10px;
 }
 
 .menu-icon {
   width: 25px;
   height: 3px;
-  background-color: white; /* Change color to white for better visibility */
+  background-color: black;
   margin: 4px 0;
 }
 
 .menu-bar {
   display: none;
-  position: absolute; /* Position the menu bar */
-  top: 50px; /* Adjust top position to align with header */
-  right: 20px; /* Align with the right edge of the viewport */
 }
 
 .show-menu {
