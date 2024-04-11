@@ -12,11 +12,11 @@
 
 
 <header>
-  <button class="menu-toggle" onclick="toggleMenu()">
+  <div class="menu-toggle" onclick="toggleMenu()">
     <div class="menu-icon"></div>
     <div class="menu-icon"></div>
     <div class="menu-icon"></div>
-  </button>
+  </div>
   
   <!-- Menu bar -->
   <div class="menu-bar" id="menuBar">
@@ -188,6 +188,7 @@ function toggleMenu() {
   var menuBar = document.getElementById('menuBar');
   menuBar.classList.toggle('show-menu');
 }
+
 
 
 // Function to switch between tabs
