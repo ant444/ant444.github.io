@@ -39,7 +39,7 @@
     }
 
     /* Updated styles for the menu bar */
-    menu-bar {
+    .menu-bar {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,13 +47,17 @@
   height: 100vh;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
+  padding: 10px;
   transition: left 0.3s ease;
   display: none; /* Initially hidden */
+  overflow: hidden; /* Ensure no overflow when hidden */
 }
 
 .show-menu .menu-bar {
   display: block;
+  overflow: auto; /* Allow scrolling when shown */
 }
+
 
     main {
       padding: 20px;
