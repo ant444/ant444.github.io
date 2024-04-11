@@ -33,7 +33,7 @@
 }
 
 .menu-bar.show-menu {
-  transform: translateX(0);
+  transform: translateX(40%);
 }
 
 
