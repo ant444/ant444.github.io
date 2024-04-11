@@ -32,7 +32,7 @@
   transform: translateX(-100%);
 }
 
-.show-menu .menu-bar {
+.menu-bar.show-menu {
   transform: translateX(0);
 }
 
