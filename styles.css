@@ -22,21 +22,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 30px);
   height: 100vh;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   padding: 10px;
   padding-left: 0; /* Adjust padding */
   transition: transform 0.3s ease;
-  width: calc(100% - 30px);
   transform: translateX(-100%);
 }
 
-.menu-bar.show-menu {
-  transform: translateX(0);
-}
 
+.menu-bar.show-menu {
+  transform: translateX(calc(0 + 30px)); /* Adjusted transform to leave space on the left */
+}
 
     .menu-toggle {
       display: flex;
