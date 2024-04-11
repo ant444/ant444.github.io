@@ -202,6 +202,19 @@ function openTab(tabName) {
   // Show the selected tab content
   document.getElementById(tabName).style.display = 'block';
 }
+// Function to close the menu when clicking outside of it
+function closeMenuOnClickOutside(event) {
+  var menuBar = document.getElementById('menuBar');
+  var menuToggle = document.querySelector('.menu-toggle');
+  
+  // Check if the clicked element is not part of the menu or menu toggle
+  if (!menuBar.contains(event.target) && !menuToggle.contains(event.target)) {
+    menuBar.classList.remove('show-menu');
+  }
+}
+
+// Add event listener to close menu on click outside
+document.addEventListener('click', closeMenuOnClickOutside);
 
   // Function to show the home tab content on page load
   function showHomeTab() {
