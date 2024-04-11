@@ -28,7 +28,8 @@
       background-color: black;
       margin: 4px 0;
     }
-.menu-bar {
+
+ .menu-bar {
   position: fixed;
   top: 0;
   left: -100%; /* Initially hidden */
@@ -38,7 +39,10 @@
   border: 1px solid #ccc;
   padding: 10px;
   transition: left 0.3s ease;
+  /* Adjust the padding */
+  padding-left: 0;
 }
+
 
 .show-menu .menu-bar {
   left: 0; /* Show menu bar */
