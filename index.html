@@ -182,23 +182,25 @@
 
 <script>
 
-    // JavaScript functions here
+// Initialize a variable to track the menu state
+var menuOpen = false;
 
-
-// Function to toggle the visibility of the menu bar
 function toggleMenu() {
   var menuBar = document.getElementById('menuBar');
   
-  // Check if the menu bar is currently visible
-  if (menuBar.style.left === '0px') {
-    // If visible, hide the menu bar by moving it off-screen
+  // Check if the menu is open
+  if (menuOpen) {
+    // If open, close the menu by moving it off-screen
     menuBar.style.left = '-100%';
+    // Update the menu state
+    menuOpen = false;
   } else {
-    // If hidden, show the menu bar by moving it to the left edge
+    // If closed, open the menu by moving it to the left edge
     menuBar.style.left = '0';
+    // Update the menu state
+    menuOpen = true;
   }
 }
-
 
 // Function to switch between tabs
 function openTab(tabName) {
