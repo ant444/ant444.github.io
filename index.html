@@ -296,21 +296,25 @@
 
     // JavaScript functions here
 
-  // Function to toggle the visibility of the menu bar
- // Function to toggle the visibility of the menu bar
+
+// Function to toggle the visibility of the menu bar
 function toggleMenu() {
   var menuBar = document.getElementById('menuBar');
   menuBar.classList.toggle('show-menu');
 }
 
-// Function to hide the menu bar when clicking outside of it
-document.addEventListener('click', function(event) {
-  var menuBar = document.getElementById('menuBar');
-  var menuToggle = document.querySelector('.menu-toggle');
-  if (!menuBar.contains(event.target) && !menuToggle.contains(event.target)) {
-    menuBar.classList.remove('show-menu');
-  }
-});
+// Function to switch between tabs
+function openTab(tabName) {
+  // Hide all tab contents
+  var tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(function(tabContent) {
+    tabContent.style.display = 'none';
+  });
+  
+  // Show the selected tab content
+  document.getElementById(tabName).style.display = 'block';
+}
+
 
 
   // Function to switch between tabs
