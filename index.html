@@ -187,10 +187,18 @@
 
 // Function to toggle the visibility of the menu bar
 function toggleMenu() {
-  console.log("Toggle menu function called!");
   var menuBar = document.getElementById('menuBar');
-  menuBar.classList.toggle('show-menu');
+  
+  // Check if the menu bar is currently visible
+  if (menuBar.style.left === '0px') {
+    // If visible, hide the menu bar by moving it off-screen
+    menuBar.style.left = '-100%';
+  } else {
+    // If hidden, show the menu bar by moving it to the left edge
+    menuBar.style.left = '0';
+  }
 }
+
 
 // Function to switch between tabs
 function openTab(tabName) {
