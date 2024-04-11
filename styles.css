@@ -87,6 +87,7 @@ footer {
 /* Style for the tab buttons */
 .tab-button {
   background-color: #333;
+  color: #fff
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -106,15 +107,8 @@ footer {
   padding: 20px;
 }
 
-/* Show the active tab content */
-.tab-button.active {
-  background-color: #ffffff; /* Background color */
-  color: #000000; /* Text color */
-}
 
-.tab-button:hover {
-  color: #ffffff; /* Change text color to match background color */
-}
+
 
 .material-symbols-outlined {
   font-variation-settings:
