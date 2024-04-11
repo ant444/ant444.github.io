@@ -29,11 +29,12 @@
   padding: 10px;
   padding-left: 0; /* Adjust padding */
   transition: transform 0.3s ease;
+  width: calc(100% - 30px);
   transform: translateX(-100%);
 }
 
 .menu-bar.show-menu {
-  transform: translateX(30px);
+  transform: translateX(0);
 }
 
 
