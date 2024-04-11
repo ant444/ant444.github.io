@@ -20,6 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 .menu-bar {
   position: fixed;
   top: 0;
@@ -103,6 +104,10 @@ footer {
 .tab-content {
   display: none;
   padding: 20px;
+}
+
+.tab-button:hover {
+  color: #ffffff; /* Change text color to white on hover */
 }
 
 .material-symbols-outlined {
