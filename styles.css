@@ -6,7 +6,9 @@
       padding: 0;
     }
 
- header {
+
+
+    header {
   background-color: #333;
   color: #fff;
   padding: 10px;
@@ -34,7 +36,6 @@
   transform: translateX(0);
 }
 
-    }
 
     .menu-toggle {
       display: flex;
