@@ -25,7 +25,6 @@
   height: 100vh;
   background-color: #333; /* Match with the header's background color */
   color: #fff; /* Text color */
-  border: 1px solid #ccc;
   padding: 10px;
   padding-left: 0;
   transition: transform 0.3s ease;
