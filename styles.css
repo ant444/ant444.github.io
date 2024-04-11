@@ -99,7 +99,7 @@
 
     /* Active tab button style */
     .tab-button.active {
-      background-color: #ccc;
+      background-color: #ffffff;
     }
 
     /* Style for the tab content */
@@ -114,5 +114,5 @@
     }
   
 .tab-button:hover {
-  color: #333; /* Change text color to match background color */
+  color: #ffffff; /* Change text color to match background color */
 }
