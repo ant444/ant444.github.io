@@ -23,7 +23,8 @@
   left: 0;
   width: 150px;
   height: 100vh;
-  background-color: #f9f9f9;
+  background-color: #333; /* Match with the header's background color */
+  color: #fff; /* Text color */
   border: 1px solid #ccc;
   padding: 10px;
   padding-left: 0;
@@ -112,3 +113,6 @@
       display: block;
     }
   
+.tab-button:hover {
+  color: #333; /* Change text color to match background color */
+}
