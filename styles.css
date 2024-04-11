@@ -27,15 +27,15 @@
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   padding: 10px;
-  padding-left: 0; /* Adjust padding */
+  padding-left: 0;
   transition: transform 0.3s ease;
   transform: translateX(-100%);
 }
 
-
 .menu-bar.show-menu {
-  transform: translateX(calc(0 + 30px)); /* Adjusted transform to leave space on the left */
+  transform: translateX(0);
 }
+
 
     .menu-toggle {
       display: flex;
