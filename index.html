@@ -218,6 +218,14 @@ function closeMenuOnClickOutside(event) {
 // Add event listener to close menu on click outside
 document.addEventListener('click', closeMenuOnClickOutside);
 
+  function toggleDyslexicFont() {
+      var elements = document.querySelectorAll('body *'); // Select all elements within the body
+
+      elements.forEach(function(element) {
+        // Toggle the dyslexia-friendly font class
+        element.classList.toggle('dyslexic-font');
+      });
+    }
   // Function to show the home tab content on page load
   function showHomeTab() {
     // Hide all tab contents
