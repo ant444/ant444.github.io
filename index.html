@@ -183,24 +183,12 @@
 <script>
 
 // Initialize a variable to track the menu state
-var menuOpen = false;
-
 function toggleMenu() {
+  console.log("Toggle menu function called!");
   var menuBar = document.getElementById('menuBar');
-  
-  // Check if the menu is open
-  if (menuOpen) {
-    // If open, close the menu by moving it off-screen
-    menuBar.style.left = '-100%';
-    // Update the menu state
-    menuOpen = false;
-  } else {
-    // If closed, open the menu by moving it to the left edge
-    menuBar.style.left = '0';
-    // Update the menu state
-    menuOpen = true;
-  }
+  menuBar.classList.toggle('show-menu');
 }
+
 
 // Function to switch between tabs
 function openTab(tabName) {
