@@ -6,6 +6,10 @@
       padding: 0;
     }
 
+    .dyslexic-font {
+      font-family: 'OpenDyslexic', sans-serif; /* Use your dyslexia-friendly font here */
+    }
+
 
     header {
   background-color: #333;
