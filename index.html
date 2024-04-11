@@ -315,20 +315,6 @@ function openTab(tabName) {
   document.getElementById(tabName).style.display = 'block';
 }
 
-
-
-  // Function to switch between tabs
-  function openTab(tabName) {
-    // Hide all tab contents
-    var tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(function(tabContent) {
-      tabContent.style.display = 'none';
-    });
-    
-    // Show the selected tab content
-    document.getElementById(tabName).style.display = 'block';
-  }
-
   // Function to show the home tab content on page load
   function showHomeTab() {
     // Hide all tab contents
