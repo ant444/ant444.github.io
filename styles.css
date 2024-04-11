@@ -29,7 +29,7 @@ header {
   width: 150px;
   height: 100vh;
   background-color: #333; /* Match with the header's background color */
-  color: #ffffff; /* Text color */
+  color: #fff; /* Text color */
   padding: 10px;
   padding-left: 0;
   transition: transform 0.3s ease;
