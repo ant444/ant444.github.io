@@ -204,6 +204,7 @@ function openTab(tabName) {
   
   // Show the selected tab content
   document.getElementById(tabName).style.display = 'block';
+  window.history.pushState({}, '', '?tab=' + tabName);
 }
 // Function to close the menu when clicking outside of it
 function closeMenuOnClickOutside(event) {
