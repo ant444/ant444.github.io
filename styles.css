@@ -12,7 +12,7 @@ header {
   padding: 10px;
   margin: 0;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -143,6 +143,7 @@ body {
   font-family: 'Dyslexie', sans-serif; /* Change font family */
 }
 
+
 .material-symbols-outlined {
   font-variation-settings:
     'FILL' 0,
@@ -150,3 +151,4 @@ body {
     'GRAD' 0,
     'opsz' 24
 }
+
