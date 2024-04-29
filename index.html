@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"> <!-- Link to Univers font -->
-   <style>
+    <style>
     body { /* This is for mobile screens, formats it nicer. */
       font-size: 16px; /* Base font size */
     }
@@ -26,6 +26,13 @@
         text-align: left; /* Align text to the left */
         padding: 10px; /* Add padding for better touch interaction */
       }
+    }
+
+    /* Adjustments for portfolio section */
+    #portfolio {
+      overflow-y: scroll; /* Always show vertical scrollbar */
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+      max-height: calc(100vh - 200px); /* Adjust max-height as needed */
     }
   </style>
 </head>
@@ -102,14 +109,6 @@
     
 
   <section id="portfolio" class="tab-content" style="display: none; overflow-y: auto; max-height: calc(100vh - 200px);"> <!-- Adjust max-height as needed -->
-    <style>
-  /* Add this style to your existing CSS or external stylesheet */
-  #portfolio {
-    overflow-y: scroll; /* Always show vertical scrollbar */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    max-height: calc(100vh - 200px); /* Adjust max-height as needed */
-  }
-</style>
   <h2>Portfolio</h2>
   <h2>Related Courses</h2>
   <h3>Have Taken: 📝</h3>
