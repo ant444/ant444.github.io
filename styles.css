@@ -110,6 +110,13 @@ header {
       padding: 20px;
     }
 
+   
+  /* Add this style to your existing CSS or external stylesheet */
+  #portfolio {
+    overflow-y: scroll; /* Always show vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    max-height: calc(100vh - 200px); /* Adjust max-height as needed */
+  }
 
 
 .material-symbols-outlined {
