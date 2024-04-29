@@ -1,4 +1,18 @@
     /* CSS styles here */
+  .dyslexic-ui header,
+  .dyslexic-ui footer {
+    background-color: #2A4C6B; /* Set header and footer background color to #2A4C6B */
+    color: white; /* Set text color in header and footer to white */
+  }
+
+  /* Light grey box background */
+  .dyslexic-ui body {
+    background-color: #f0f0f0; /* Set background color to light grey */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-family: 'Dyslexie', sans-serif; /* Change font family */
+  }
     /* Basic styles - Customize as needed */
     body {
       /*font-family: Arial, sans-serif; */
