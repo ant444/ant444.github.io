@@ -1,26 +1,10 @@
-    /* CSS styles here */
-  .dyslexic-ui header,
-  .dyslexic-ui footer {
-    background-color: #2A4C6B; /* Set header and footer background color to #2A4C6B */
-    color: white; /* Set text color in header and footer to white */
-  }
-
-  /* Light grey box background */
-  .dyslexic-ui body {
-    background-color: #f0f0f0; /* Set background color to light grey */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    font-family: 'Dyslexie', sans-serif; /* Change font family */
-  }
-    /* Basic styles - Customize as needed */
-    body {
-      /*font-family: Arial, sans-serif; */
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
+/* Basic styles - Customize as needed */
+body {
+  /*font-family: Arial, sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 header {
   background-color: #333;
@@ -50,83 +34,119 @@ header {
   transform: translateX(0%);
 }
 
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
 
-    .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      
-    }
+.menu-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #f2f2f2; 
+  margin: 4px 0;
+}
 
-    .menu-icon {
-      width: 25px;
-      height: 3px;
-      background-color: #f2f2f2; 
-      margin: 4px 0;
-    }
+main {
+  padding: 20px;
+  margin: 0 auto; /* Center the main content horizontally */
+  max-width: 800px; /* Adjust the max-width as needed */
+}
 
+#contact {
+  text-align: center;
+}
 
+.logo-container {
+  margin-top: 20px; /* Adjust margin as needed */
+}
 
+.small-image {
+  width: 50px;
+  height: auto;
+  margin-top: 10px; /* Adjust margin as needed */
+}
 
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
 
+/* Style for the tab buttons */
+.tab-button {
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
 
-    main {
-      padding: 20px;
-      margin: 0 auto; /* Center the main content horizontally */
-      max-width: 800px; /* Adjust the max-width as needed */
-    }
+/* Style for the tab content */
+.tab-content {
+  display: none;
+  padding: 20px;
+}
 
-    #contact {
-      text-align: center;
-    }
+/* Other CSS styles */
+/* This is for mobile screens, formats it nicer. */
+body {
+  font-size: 16px; /* Base font size */
+}
 
-    .logo-container {
-      margin-top: 20px; /* Adjust margin as needed */
-    }
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+  .menu-bar {
+    flex-direction: column; /* Stack menu items vertically on small screens */
+  }
+  .tab-button {
+    width: 100%; /* Make menu buttons full width on small screens */
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Add padding for better touch interaction */
+  }
+}
 
-    .small-image {
-      width: 50px;
-      height: auto;
-      margin-top: 10px; /* Adjust margin as needed */
-    }
+#portfolio {
+  overflow-y: scroll; /* Always show vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  max-height: calc(100vh - 200px); /* Adjust max-height as needed */
+}
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 2px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      font-size: 14px;
-    }
+/* Style the scrollbar */
+#portfolio::-webkit-scrollbar {
+  width: 0; /* Set the width of the scrollbar to 0 */
+}
 
-    /* Style for the tab buttons */
-    .tab-button {
-      background-color: #333;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-right: 10px;
-    }
+/* CSS styles for dyslexic UI mode */
+.dyslexic-ui header,
+.dyslexic-ui footer {
+  background-color: #2A4C6B; /* Set header and footer background color to #2A4C6B */
+  color: white; /* Set text color in header and footer to white */
+}
 
-
-
-    /* Style for the tab content */
-    .tab-content {
-      display: none;
-      padding: 20px;
-    }
-
-   
-
+/* Light grey box background */
+.dyslexic-ui body {
+  background-color: #f0f0f0; /* Set background color to light grey */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  font-family: 'Dyslexie', sans-serif; /* Change font family */
+}
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
