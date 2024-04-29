@@ -38,7 +38,20 @@
     #portfolio::-webkit-scrollbar {
       width: 0; /* Set the width of the scrollbar to 0 */
     }
-   
+   /* CSS styles for dyslexic UI and light grey grid background */
+    .dyslexic-ui {
+      color: #2A4C6B; /* Set text color to #2A4C6B */
+    }
+
+    header, footer {
+      background-color: #2A4C6B; /* Set header and footer background color to #2A4C6B */
+      color: white; /* Set text color in header and footer to white */
+    }
+
+    .grid-background {
+      background-image: linear-gradient(90deg, #f0f0f0 1px, transparent 1px), linear-gradient(180deg, #f0f0f0 1px, transparent 1px); /* Create grid background */
+      background-size: 20px 20px; /* Set grid size */
+    }
 
   </style>
 </head>
@@ -59,8 +72,7 @@
     <button class="tab-button" onclick="openTab('about')"><span class="material-symbols-outlined">handshake</span>About</button>
     <button class="tab-button" onclick="openTab('portfolio')"><span class="material-symbols-outlined">article</span>Portfolio</button>
     <button class="tab-button" onclick="openTab('resume')"><span class="material-symbols-outlined">file_open</span>Resume</button>
-    <button class="tab-button" onclick="toggleDyslexicFont()"><span class="material-symbols-outlined">accessibility_new</span>User Accessibility (Dyslexia Friendly Font)</button>
-
+    <button class="tab-button" onclick="toggleDyslexicUI()"> <span class="material-symbols-outlined">accessibility_new</span> Toggle Dyslexic UI </button>
   </div>
 
 </header>
@@ -289,28 +301,19 @@ function closeMenuOnClickOutside(event) {
 
 // Add event listener to close menu on click outside
 document.addEventListener('click', closeMenuOnClickOutside);
+  
+  function toggleDyslexicUI() {
+  var elements = document.querySelectorAll('body, header, footer'); // Select body, header, and footer elements
 
-  function toggleDyslexicFont() {
-      var elements = document.querySelectorAll('body *'); // Select all elements within the body
-         /* CSS styles for dyslexic UI and light grey grid background */
-.dyslexic-ui {
-  color: #fff; /* Set text color to #fff */
+  elements.forEach(function(element) {
+    // Toggle the dyslexic-ui class
+    element.classList.toggle('dyslexic-ui');
+  });
+
+  // Toggle the grid background for the body
+  document.body.classList.toggle('grid-background');
 }
 
-header, footer {
-  background-color: #2A4C6B; /* Set header and footer background color to #2A4C6B */
-  color: white; /* Set text color in header and footer to white */
-}
-
-body {
-  background-image: linear-gradient(90deg, #f0f0f0 1px, transparent 1px), linear-gradient(180deg, #f0f0f0 1px, transparent 1px); /* Create grid background */
-  background-size: 20px 20px; /* Set grid size */
-}
-      elements.forEach(function(element) {
-        // Toggle the dyslexia-friendly font class
-        element.classList.toggle('dyslexic-font');
-      });
-    }
   // Function to show the home tab content on page load
   function showHomeTab() {
     // Hide all tab contents
