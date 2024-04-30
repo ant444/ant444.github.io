@@ -142,6 +142,12 @@ body {
   align-items: center; /* Center content vertically */
   font-family: 'Dyslexie', sans-serif; /* Change font family */
 }
+.dyslexic-text {
+  /* Add dyslexic UI styles for text elements */
+  /* Adjust styles as needed */
+  font-family: "OpenDyslexic", sans-serif; /* Use OpenDyslexic font */
+  /* Add more styles such as color, letter-spacing, line-height, etc. */
+}
 
 
 .material-symbols-outlined {
