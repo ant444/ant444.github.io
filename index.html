@@ -257,17 +257,15 @@ function closeMenuOnClickOutside(event) {
 // Add event listener to close menu on click outside
 document.addEventListener('click', closeMenuOnClickOutside);
   
-  function toggleDyslexicUI() {
-  var elements = document.querySelectorAll('body, header, footer'); // Select body, header, and footer elements
+function toggleDyslexicUI() {
+  var elements = document.querySelectorAll('body, header, footer, .tab-content'); // Include .tab-content elements
 
   elements.forEach(function(element) {
     // Toggle the dyslexic-ui class
     element.classList.toggle('dyslexic-ui');
   });
-
-  // Toggle the grid background for the body
-  document.body.classList.toggle('grid-background');
 }
+
 
   // Function to show the home tab content on page load
   function showHomeTab() {
