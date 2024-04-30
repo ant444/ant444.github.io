@@ -141,7 +141,7 @@ body {
 
 /* Light grey box background */
 .dyslexic-ui body {
-  background-color: #f0f0f0; /* Set background color to light grey */
+  background-color: #FFFDD0; /* Set background color to light grey */
   display: flex; /* Use flexbox for layout */
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
