@@ -115,6 +115,11 @@ body {
     padding: 10px; /* Add padding for better touch interaction */
   }
 }
+@media screen and (max-width: 768px) {
+  .show-menu .tab-content {
+    margin-left: 250px; /* Adjust the value as needed */
+  }
+}
 
 #portfolio {
   overflow-y: scroll; /* Always show vertical scrollbar */
